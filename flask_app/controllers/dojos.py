@@ -8,7 +8,12 @@ def showDojos():
 
 @app.route('/dojos/<int:dojoId>')
 def showDetails(dojoId):
-    return render_template('details.html',title='Dojo Show')
+    data = { 
+        'id': dojoId
+        }
+    results = Dojo.get_ninjas(data)
+
+    return render_template('details.html',title='Dojo Show',dojo=results[0],ninjas=results[1])
 
 @app.route('/dojos/create', methods=['POST'])
 def createDojo():

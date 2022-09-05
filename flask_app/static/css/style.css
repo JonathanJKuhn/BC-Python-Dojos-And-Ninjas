@@ -2,11 +2,15 @@ body {
     background-color: #ddd;    
 }
 
-.container, .col-3, .col-4{
+.container, .col-3, .col-4, .table{
     background-color: #333;
     color: #fff;
     padding: 20px;
     border-radius: 10px;
+}
+
+.table {
+    border-color: #2d2d2d;
 }
 
 .list-group-item {
