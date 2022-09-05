@@ -12,8 +12,7 @@ def showDetails(dojoId):
         'id': dojoId
         }
     results = Dojo.get_ninjas(data)
-
-    return render_template('details.html',title='Dojo Show',dojo=results[0],ninjas=results[1])
+    return render_template('details.html',title=f'{results[0].name} Ninjas',dojo=results[0],ninjas=results[1])
 
 @app.route('/dojos/create', methods=['POST'])
 def createDojo():

@@ -6,10 +6,10 @@
         <h1 class="mb-3">{{title}}</h1>
         <a href="/" class="btn btn-primary">Home</a>
     </div>
-    <form action="#" method="post">
+    <form action="/ninjas/create" method="post">
         <div class="mb-3">
-            <label for="dojoSelect">Dojo</label>
-            <select name="dojoSelect" id="dojoSelect" class="form-select">
+            <label for="dojo">Dojo</label>
+            <select name="dojo" id="dojo" class="form-select">
                 {% for dojo in dojos %}
                     <option value="{{dojo.id}}">{{dojo.name}}</option>
                 {% endfor %}
@@ -24,8 +24,8 @@
             <input type="text" class="form-control" name="lname" id="lname">
         </div>
         <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" name="email" id="email">
+            <label for="age" class="form-label">Age:</label>
+            <input type="number" class="form-control" name="age" id="age" min="0">
         </div>
         <input type="submit" class="btn btn-primary" value="Add Ninja">
     </form>
